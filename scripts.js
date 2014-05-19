@@ -7,6 +7,7 @@ $(document).ready(function() {
 
     $.ajax(url, {type: 'get'}).success(function(data) {
       var movieData = JSON.parse(data);
+      $("#movie_title").val('');
       $('#title').html(movieData.Title);
       $('#movie_details').html("<p>Year:" + movieData.Year + "</p>"
         + "<p>Director:" + movieData.Director + "</p>");
